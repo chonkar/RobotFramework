@@ -1,0 +1,5 @@
+Run command:python -m robot --listener allure_robotframework --prerunmodifier allure_robotframework.testplan --outputdir "D:\Robot Framework\Results" "D:\Robot Framework\Tests"
+
+Open report:robot --listener "allure_robotframework;Results\allure_results" --outputdir Results Tests\sauceLabs\invalidLoginTest.robot
+
+Open Allure report:allure serve Results\allure_results

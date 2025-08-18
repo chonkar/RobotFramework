@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-18T15:44:48.489853" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\RobotFramework_AIS\Tests">
+<suite id="s1-s1" name="sauceLabs" source="D:\RobotFramework_AIS\Tests\sauceLabs">
+<suite id="s1-s1-s1" name="invalidLoginTest" source="D:\RobotFramework_AIS\Tests\sauceLabs\invalidLoginTest.robot">
+<kw name="Start TestCase" owner="commonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:44:50.027868" level="INFO">Opening browser 'ff' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2025-08-18T15:44:50.489607" level="WARN">The geckodriver version (0.36.0) detected in PATH at D:\geckodriver-v0.36.0-win32\geckodriver.exe might not be compatible with the detected firefox version (117.0); currently, geckodriver 0.35.0 is recommended for firefox 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url.${env}}</arg>
+<arg>${Browser.FireFox}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-18T15:44:50.026136" elapsed="16.708766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-18T15:45:09.737383" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-18T15:45:06.735672" elapsed="3.002065"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.738161" elapsed="0.007110"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:44:50.024728" elapsed="19.720802"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Right user wrong pass" line="12">
+<kw name="Verify Login With Invalid Credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:09.749159" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<arg>${LoginPage_user_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.748412" elapsed="0.125051"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:09.875726" level="INFO">Typing text 'wrong_password' into text field '//input[@id='password']'.</msg>
+<arg>${LoginPage_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.874055" elapsed="0.063365"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.937744" elapsed="0.040477"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:09.980088" level="INFO">Sending key(s) ('[Return]',) to //input[@id='login-button'] element.</msg>
+<msg time="2025-08-18T15:45:10.282668" level="INFO">Sending keys [Return]</msg>
+<arg>${LoginPage_login_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.978918" elapsed="0.348310"/>
+</kw>
+<arg>username=standard_user</arg>
+<arg>password=wrong_password</arg>
+<status status="PASS" start="2025-08-18T15:45:09.747769" elapsed="0.579703"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:09.745711" elapsed="0.582238"/>
+</test>
+<test id="s1-s1-s1-t2" name="Wrong user correct pass" line="12">
+<kw name="Verify Login With Invalid Credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.335627" level="INFO">Typing text 'bad_username' into text field '//input[@id='user-name']'.</msg>
+<arg>${LoginPage_user_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.334715" elapsed="0.068347"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.403925" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
+<arg>${LoginPage_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.403353" elapsed="0.068386"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.472030" elapsed="0.032092"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.506244" level="INFO">Sending key(s) ('[Return]',) to //input[@id='login-button'] element.</msg>
+<msg time="2025-08-18T15:45:10.815467" level="INFO">Sending keys [Return]</msg>
+<arg>${LoginPage_login_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.504756" elapsed="0.338035"/>
+</kw>
+<arg>username=bad_username</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-08-18T15:45:10.333531" elapsed="0.509576"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:10.329810" elapsed="0.513685"/>
+</test>
+<test id="s1-s1-s1-t3" name="Locked out user" line="12">
+<kw name="Verify Login With Invalid Credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.850827" level="INFO">Typing text 'locked_out_user' into text field '//input[@id='user-name']'.</msg>
+<arg>${LoginPage_user_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.849590" elapsed="0.112876"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.965438" level="INFO">Typing text 'wrong_password' into text field '//input[@id='password']'.</msg>
+<arg>${LoginPage_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.963678" elapsed="0.185798"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.150074" elapsed="0.055722"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:11.207820" level="INFO">Sending key(s) ('[Return]',) to //input[@id='login-button'] element.</msg>
+<msg time="2025-08-18T15:45:11.503431" level="INFO">Sending keys [Return]</msg>
+<arg>${LoginPage_login_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.206380" elapsed="0.313944"/>
+</kw>
+<arg>username=locked_out_user</arg>
+<arg>password=wrong_password</arg>
+<status status="PASS" start="2025-08-18T15:45:10.848308" elapsed="0.672317"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:10.844163" elapsed="0.677027"/>
+</test>
+<test id="s1-s1-s1-t4" name="Right user empty pass" line="12">
+<kw name="Verify Login With Invalid Credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:11.530744" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<arg>${LoginPage_user_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.528303" elapsed="0.121425"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:11.651141" level="INFO">Typing text '' into text field '//input[@id='password']'.</msg>
+<arg>${LoginPage_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.650217" elapsed="0.038052"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.688749" elapsed="0.031023"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:11.721312" level="INFO">Sending key(s) ('[Return]',) to //input[@id='login-button'] element.</msg>
+<msg time="2025-08-18T15:45:12.005437" level="INFO">Sending keys [Return]</msg>
+<arg>${LoginPage_login_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.720232" elapsed="0.301512"/>
+</kw>
+<arg>username=standard_user</arg>
+<arg>password=${EMPTY}</arg>
+<status status="PASS" start="2025-08-18T15:45:11.526016" elapsed="0.496031"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:11.522256" elapsed="0.500152"/>
+</test>
+<kw name="End TestCase" owner="commonKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:12.024056" elapsed="4.642061"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:12.023569" elapsed="4.642768"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:44:48.656163" elapsed="28.010270"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.652832" elapsed="28.015006"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.608736" elapsed="28.059925"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="4" fail="0" skip="0">Tests</stat>
+<stat name="sauceLabs" id="s1-s1" pass="4" fail="0" skip="0">Tests.sauceLabs</stat>
+<stat name="invalidLoginTest" id="s1-s1-s1" pass="4" fail="0" skip="0">Tests.sauceLabs.invalidLoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-18T15:44:50.489607" level="WARN">The geckodriver version (0.36.0) detected in PATH at D:\geckodriver-v0.36.0-win32\geckodriver.exe might not be compatible with the detected firefox version (117.0); currently, geckodriver 0.35.0 is recommended for firefox 117.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

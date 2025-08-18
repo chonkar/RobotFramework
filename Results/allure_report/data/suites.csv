@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"This testcase verifies the Login Functionality","20440","Verify Continue Shopping Button is navigating to correct Page","Tests","Mon Aug 18 17:04:02 IST 2025","passed","Mon Aug 18 17:04:22 IST 2025","basicSearch","sauceLabs","",""
+"","459","Right user wrong pass","Tests","Mon Aug 18 17:04:34 IST 2025","passed","Mon Aug 18 17:04:35 IST 2025","invalidLoginTest","sauceLabs","",""
+"","428","Locked out user","Tests","Mon Aug 18 17:04:35 IST 2025","passed","Mon Aug 18 17:04:35 IST 2025","invalidLoginTest","sauceLabs","",""
+"This testcase verifies the Login Functionality","27466","Verify Login Functionality","Tests","Mon Aug 18 17:03:34 IST 2025","passed","Mon Aug 18 17:04:02 IST 2025","basicSearch","sauceLabs","",""
+"","417","Right user empty pass","Tests","Mon Aug 18 17:04:35 IST 2025","passed","Mon Aug 18 17:04:36 IST 2025","invalidLoginTest","sauceLabs","",""
+"","423","Wrong user correct pass","Tests","Mon Aug 18 17:04:35 IST 2025","passed","Mon Aug 18 17:04:35 IST 2025","invalidLoginTest","sauceLabs","",""

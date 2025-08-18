@@ -1,7 +1,5 @@
-${username};${password}
-standard_user;secret_sauce
-locked_out_user;secret_sauce
-problem_user;secret_sauce
-performance_glitch_user;secret_sauce
-error_user;secret_sauce
-visual_user;secret_sauce
+*** Test Cases ***;${username};${password}
+Right user wrong pass;standard_user;wrong_password
+Wrong user correct pass;bad_username;secret_sauce
+Locked out user;locked_out_user;wrong_password
+Right user empty pass;standard_user;${EMPTY}

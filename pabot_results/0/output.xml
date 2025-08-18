@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-18T13:51:27.432738" rpa="false" schemaversion="5">
+<suite id="s1" name="googleSearch" source="D:\RobotFramework_AIS\Tests\Google\googleSearch.robot">
+<test id="s1-t1" name="This is a google run test" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-18T13:51:29.011819" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-18T13:51:29.011026" elapsed="7.409587"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-18T13:51:36.422025" elapsed="2.452677"/>
+</kw>
+<doc>Google Test</doc>
+<tag>Regression</tag>
+<status status="PASS" start="2025-08-18T13:51:29.008239" elapsed="9.867021"/>
+</test>
+<status status="PASS" start="2025-08-18T13:51:27.534615" elapsed="11.341986"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat name="googleSearch" id="s1" pass="1" fail="0" skip="0">googleSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

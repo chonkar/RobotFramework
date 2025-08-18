@@ -1,0 +1,16 @@
+--suite Tests.sauceLabs.basicSearch
+--variable CALLER_ID:e1d9f1def6714671b2beb182ca896926
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:4
+--variable PABOTQUEUEINDEX:2
+--variable PABOTLASTLEVEL:Tests.sauceLabs.basicSearch
+--outputdir Results\pabot_results\2
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--consolecolors off
+--consolemarkers off
+Tests

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-18T15:44:48.489186" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\RobotFramework_AIS\Tests">
+<suite id="s1-s1" name="sauceLabs" source="D:\RobotFramework_AIS\Tests\sauceLabs">
+<suite id="s1-s1-s1" name="basicSearch" source="D:\RobotFramework_AIS\Tests\sauceLabs\basicSearch.robot">
+<test id="s1-s1-s1-t1" name="Verify Login Functionality" line="16">
+<kw name="Start TestCase" owner="commonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:44:50.167508" level="INFO">Opening browser 'ff' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2025-08-18T15:44:50.613594" level="WARN">The geckodriver version (0.36.0) detected in PATH at D:\geckodriver-v0.36.0-win32\geckodriver.exe might not be compatible with the detected firefox version (117.0); currently, geckodriver 0.35.0 is recommended for firefox 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url.${env}}</arg>
+<arg>${Browser.FireFox}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-18T15:44:50.165079" elapsed="16.622125"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-18T15:45:09.789973" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-18T15:45:06.788149" elapsed="3.002224"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.790960" elapsed="0.005570"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:44:50.163052" elapsed="19.633771"/>
+</kw>
+<kw name="Basic Login TestCase" owner="sauceLabsKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:09.799193" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<arg>${LoginPage_user_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.798307" elapsed="0.117126"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:09.917273" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
+<arg>${LoginPage_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.916077" elapsed="0.058528"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:09.975131" elapsed="0.030204"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.006739" level="INFO">Sending key(s) ('[Return]',) to //input[@id='login-button'] element.</msg>
+<msg time="2025-08-18T15:45:10.334867" level="INFO">Sending keys [Return]</msg>
+<arg>${LoginPage_login_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.005765" elapsed="0.366626"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_sort_container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.372788" elapsed="0.270699"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.670651" level="INFO">Current page contains text 'Products'.</msg>
+<arg>${ProductText}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.643981" elapsed="0.026837"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:09.797350" elapsed="0.873650"/>
+</kw>
+<kw name="Select the Filter" owner="sauceLabsKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_sort_container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.672353" elapsed="0.033836"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:10.707607" level="INFO">Selecting options from selection list '//select[@class='product_sort_container']' by index 2.</msg>
+<arg>${LoginPage_sort_container}</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-08-18T15:45:10.706775" elapsed="0.385328"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:10.671364" elapsed="0.421100"/>
+</kw>
+<kw name="Click on Add to Cart Button" owner="LandingPageKeyWords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:11.097810" level="INFO">Sending key(s) ('[Return]',) to xpath:(//button[contains(text(),'CART')]) element.</msg>
+<msg time="2025-08-18T15:45:11.412191" level="INFO">Sending keys [Return]</msg>
+<arg>${LandingPage_cart_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.094546" elapsed="0.341923"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:11.093254" elapsed="0.343509"/>
+</kw>
+<kw name="Click on Cart Icon" owner="LandingPageKeyWords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LandingPage_shopping_cart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.438277" elapsed="0.022877"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:11.462818" level="INFO">Sending key(s) ('[Return]',) to xpath://div[@id='shopping_cart_container']/a element.</msg>
+<msg time="2025-08-18T15:45:11.753155" level="INFO">Sending keys [Return]</msg>
+<arg>${LandingPage_shopping_cart}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.461630" elapsed="0.314479"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:11.437343" elapsed="0.339234"/>
+</kw>
+<kw name="Click on CheckOut Button" owner="yourCartKeyWords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${YourCartcheckout_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:11.778261" elapsed="0.457466"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:12.237372" level="INFO">Sending key(s) ('[Return]',) to xpath://a[contains(text(),'CHECKOUT')] element.</msg>
+<msg time="2025-08-18T15:45:12.537124" level="INFO">Sending keys [Return]</msg>
+<arg>${YourCartcheckout_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:12.236348" elapsed="0.340134"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:11.777092" elapsed="0.800169"/>
+</kw>
+<kw name="Enter User Details" owner="CheckOut_YourInformation">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:first-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:12.579564" elapsed="0.677353"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:13.261913" level="INFO">Typing text 'Kavita' into text field 'id:first-name'.</msg>
+<arg>id:first-name</arg>
+<arg>${userdetails.first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:13.257463" elapsed="0.147478"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:13.408433" level="INFO">Typing text 'Chonkar' into text field 'id:last-name'.</msg>
+<arg>id:last-name</arg>
+<arg>${userdetails.last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:13.405824" elapsed="0.094520"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:13.502876" level="INFO">Typing text '452016' into text field 'id:postal-code'.</msg>
+<arg>id:postal-code</arg>
+<arg>${userdetails.postcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:13.500886" elapsed="0.063289"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:12.578083" elapsed="0.986434"/>
+</kw>
+<kw name="Click on Continue Button" owner="CheckOut_YourInformation">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:13.567251" level="INFO">Sending key(s) ('[Return]',) to xpath://input[@value='CONTINUE'] element.</msg>
+<msg time="2025-08-18T15:45:13.893021" level="INFO">Sending keys [Return]</msg>
+<arg>${CheckoutYourInformationPage_continue_Button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:13.566009" elapsed="0.360921"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:13.565063" elapsed="0.362744"/>
+</kw>
+<kw name="End TestCase" owner="commonKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:13.930690" elapsed="4.363780"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:13.929010" elapsed="4.365705"/>
+</kw>
+<doc>This testcase verifies the Login Functionality</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2025-08-18T15:44:50.160885" elapsed="28.133974"/>
+</test>
+<test id="s1-s1-s1-t2" name="Verify Continue Shopping Button is navigating to correct Page" line="29">
+<kw name="Start TestCase" owner="commonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:18.300262" level="INFO">Opening browser 'ff' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2025-08-18T15:45:18.647380" level="WARN">The geckodriver version (0.36.0) detected in PATH at D:\geckodriver-v0.36.0-win32\geckodriver.exe might not be compatible with the detected firefox version (117.0); currently, geckodriver 0.35.0 is recommended for firefox 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url.${env}}</arg>
+<arg>${Browser.FireFox}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-18T15:45:18.297949" elapsed="8.803452"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-18T15:45:30.102460" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-18T15:45:27.101733" elapsed="3.000973"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.103041" elapsed="0.005490"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:18.297089" elapsed="11.811592"/>
+</kw>
+<kw name="Basic Login TestCase" owner="sauceLabsKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:30.109840" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<arg>${LoginPage_user_name}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.109450" elapsed="0.064911"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:30.176254" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
+<arg>${LoginPage_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.175012" elapsed="0.037134"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.212426" elapsed="0.016279"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:30.229838" level="INFO">Sending key(s) ('[Return]',) to //input[@id='login-button'] element.</msg>
+<msg time="2025-08-18T15:45:30.547338" level="INFO">Sending keys [Return]</msg>
+<arg>${LoginPage_login_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.229033" elapsed="0.337864"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_sort_container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.567185" elapsed="0.235041"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:30.815222" level="INFO">Current page contains text 'Products'.</msg>
+<arg>${ProductText}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.802607" elapsed="0.012846"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:30.108974" elapsed="0.706776"/>
+</kw>
+<kw name="Select the Filter" owner="sauceLabsKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_sort_container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.817225" elapsed="0.034335"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:30.852427" level="INFO">Selecting options from selection list '//select[@class='product_sort_container']' by index 2.</msg>
+<arg>${LoginPage_sort_container}</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-08-18T15:45:30.851860" elapsed="0.302837"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:30.816237" elapsed="0.338776"/>
+</kw>
+<kw name="Click on Add to Cart Button" owner="LandingPageKeyWords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:31.157381" level="INFO">Sending key(s) ('[Return]',) to xpath:(//button[contains(text(),'CART')]) element.</msg>
+<msg time="2025-08-18T15:45:31.461015" level="INFO">Sending keys [Return]</msg>
+<arg>${LandingPage_cart_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:31.156436" elapsed="0.324005"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:31.155476" elapsed="0.325256"/>
+</kw>
+<kw name="Click on Cart Icon" owner="LandingPageKeyWords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LandingPage_shopping_cart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:31.482122" elapsed="0.027865"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:31.511765" level="INFO">Sending key(s) ('[Return]',) to xpath://div[@id='shopping_cart_container']/a element.</msg>
+<msg time="2025-08-18T15:45:31.827116" level="INFO">Sending keys [Return]</msg>
+<arg>${LandingPage_shopping_cart}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:31.510551" elapsed="0.338177"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:31.481224" elapsed="0.367851"/>
+</kw>
+<kw name="Click on Continue Shopping Button" owner="yourCartKeyWords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${YourCartcontinueshopping_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:31.850509" elapsed="0.230850"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:32.082551" level="INFO">Sending key(s) ('[Return]',) to xpath://a[contains(text(),'Continue Shopping')] element.</msg>
+<msg time="2025-08-18T15:45:32.381891" level="INFO">Sending keys [Return]</msg>
+<arg>${YourCartcontinueshopping_button}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:32.081745" elapsed="0.354468"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:31.849614" elapsed="0.586881"/>
+</kw>
+<kw name="Page Contain Product" owner="sauceLabsKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginPage_sort_container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T15:45:32.437770" elapsed="0.228841"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:45:32.678739" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-08-18T15:45:32.667072" elapsed="0.011838"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:32.436898" elapsed="0.242206"/>
+</kw>
+<kw name="End TestCase" owner="commonKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:32.680263" elapsed="5.565960"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:45:32.679623" elapsed="5.566813"/>
+</kw>
+<doc>This testcase verifies the Login Functionality</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2025-08-18T15:45:18.296002" elapsed="19.950533"/>
+</test>
+<status status="PASS" start="2025-08-18T15:44:48.654078" elapsed="49.593423"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.650886" elapsed="49.597888"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.604428" elapsed="49.645374"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="sauceLabs" id="s1-s1" pass="2" fail="0" skip="0">Tests.sauceLabs</stat>
+<stat name="basicSearch" id="s1-s1-s1" pass="2" fail="0" skip="0">Tests.sauceLabs.basicSearch</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-18T15:44:49.951785" level="ERROR">Error in file 'D:\RobotFramework_AIS\Resources\PageObjects\LandingPageKeyWords.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2025-08-18T15:44:49.958897" level="ERROR">Error in file 'D:\RobotFramework_AIS\Resources\PageObjects\yourCartKeyWords.robot' on line 4: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2025-08-18T15:44:49.965748" level="ERROR">Error in file 'D:\RobotFramework_AIS\Resources\PageObjects\CheckOut_YourInformation.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2025-08-18T15:44:50.613594" level="WARN">The geckodriver version (0.36.0) detected in PATH at D:\geckodriver-v0.36.0-win32\geckodriver.exe might not be compatible with the detected firefox version (117.0); currently, geckodriver 0.35.0 is recommended for firefox 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-08-18T15:45:18.647380" level="WARN">The geckodriver version (0.36.0) detected in PATH at D:\geckodriver-v0.36.0-win32\geckodriver.exe might not be compatible with the detected firefox version (117.0); currently, geckodriver 0.35.0 is recommended for firefox 117.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-18T15:44:48.482890" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\RobotFramework_AIS\Tests">
+<suite id="s1-s1" name="Google" source="D:\RobotFramework_AIS\Tests\Google">
+<suite id="s1-s1-s1" name="googleSearch" source="D:\RobotFramework_AIS\Tests\Google\googleSearch.robot">
+<test id="s1-s1-s1-t1" name="This is a google run test" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-18T15:44:50.124223" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-18T15:44:50.123355" elapsed="10.300425"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-18T15:45:00.428050" elapsed="3.008605"/>
+</kw>
+<doc>Google Test</doc>
+<tag>Regression</tag>
+<status status="PASS" start="2025-08-18T15:44:50.121215" elapsed="13.316319"/>
+</test>
+<status status="PASS" start="2025-08-18T15:44:48.652613" elapsed="14.786885"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.648020" elapsed="14.793780"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.599131" elapsed="14.845072"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Google" id="s1-s1" pass="1" fail="0" skip="0">Tests.Google</stat>
+<stat name="googleSearch" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Google.googleSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

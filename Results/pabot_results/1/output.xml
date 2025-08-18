@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-18T15:44:48.484807" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\RobotFramework_AIS\Tests">
+<suite id="s1-s1" name="sauceLabs" source="D:\RobotFramework_AIS\Tests\sauceLabs">
+<suite id="s1-s1-s1" name="ArgumentDemo" source="D:\RobotFramework_AIS\Tests\sauceLabs\ArgumentDemo.robot">
+<test id="s1-s1-s1-t1" name="Argument Demo Keyword Test" line="7">
+<kw name="Argument Demo Keyword">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-18T15:44:48.970874" level="INFO">kavita</msg>
+<arg>${arg1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-18T15:44:48.970066" elapsed="0.001008"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-18T15:44:48.972991" level="INFO">chonkar</msg>
+<arg>${arg2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-18T15:44:48.972185" elapsed="0.000994"/>
+</kw>
+<arg>kavita</arg>
+<arg>chonkar</arg>
+<status status="PASS" start="2025-08-18T15:44:48.967930" elapsed="0.005528"/>
+</kw>
+<status status="PASS" start="2025-08-18T15:44:48.965274" elapsed="0.008469"/>
+</test>
+<status status="PASS" start="2025-08-18T15:44:48.656030" elapsed="0.319133"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.652010" elapsed="0.324202"/>
+</suite>
+<status status="PASS" start="2025-08-18T15:44:48.602560" elapsed="0.374536"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="sauceLabs" id="s1-s1" pass="1" fail="0" skip="0">Tests.sauceLabs</stat>
+<stat name="ArgumentDemo" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.sauceLabs.ArgumentDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
