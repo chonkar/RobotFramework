@@ -13,6 +13,7 @@ ${env}        qa
 Start TestCase
     [Arguments]    ${browser_name}=Chrome
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].${browser_name}Options()    sys, selenium.webdriver
+    ${profile_dir}=    Evaluate    __import__('tempfile').mkdtemp()    modules=tempfile
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
