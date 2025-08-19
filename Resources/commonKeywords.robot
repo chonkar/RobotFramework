@@ -10,7 +10,7 @@ ${env}  qa
 *** Keywords ***
 Start TestCase
     [Arguments]  ${browser_name}=FireFox
-    Open Browser  ${url.${env}} ${Browser.FireFox}  headless=True
+    Open Browser  ${url.${env}} ${Browser.FireFox}
     Maximize Browser Window
     Sleep  2s
 
