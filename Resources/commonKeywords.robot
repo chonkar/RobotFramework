@@ -19,7 +19,7 @@ Start TestCase
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     
     ${profile_dir}=    Evaluate    __import__('tempfile').mkdtemp()    modules=tempfile
-    Call Method    ${options}    add_argument    --user-data-dir=${profile_dir}
+    Call Method    ${options}    add_argument    ${"--user-data-dir=%s" % profile_dir}
 
     Create WebDriver    Chrome    chrome_options=${options}
     Go To    ${url["${env}"]}
