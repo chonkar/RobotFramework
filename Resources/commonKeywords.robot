@@ -22,7 +22,7 @@ Start TestCase
     ${user_data_arg}=    Set Variable    --user-data-dir=${profile_dir}
     Call Method    ${options}    add_argument    ${user_data_arg}
 
-    Create WebDriver    Chrome    chrome_options=${options}
+    Create WebDriver    Chrome    options=${options}
     Go To    ${url["${env}"]}
     Maximize Browser Window
 
