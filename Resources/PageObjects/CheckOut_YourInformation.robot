@@ -2,8 +2,6 @@
 Library  SeleniumLibrary
 Variables  ../Webelements.py
 
-Test Teardown    Run Keyword If    '${TEST STATUS}' == 'FAIL'    Attach Screenshot On Failure
-
 *** Variables ***
 &{userdetails}  first_name=Kavita  last_name=Chonkar  postcode=452016
 #${continue_Button}  xpath://input[@value='CONTINUE']

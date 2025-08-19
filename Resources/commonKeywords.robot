@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library  WebDriverManager
 
 *** Variables ***
 ${env}  qa
@@ -8,10 +9,10 @@ ${env}  qa
 
 *** Keywords ***
 Start TestCase
-    Open Browser  ${url.${env}}  ${Browser.FireFox}
-    Sleep  3s
+    [Arguments]  ${browser_name}=FireFox
+    Open Browser  ${url[${env}]}  ${browser[${browser_name}]}  headless=True
     Maximize Browser Window
-
+    Sleep  2s
 
 End TestCase
     Close Browser

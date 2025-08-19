@@ -2,7 +2,6 @@
 Library  SeleniumLibrary
 Variables  ../Webelements.py
 
-Test Teardown    Run Keyword If    '${TEST STATUS}' == 'FAIL'    Attach Screenshot On Failure
 *** Variables ***
 
 *** Keywords ***
