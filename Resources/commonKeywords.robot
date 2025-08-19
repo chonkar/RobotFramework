@@ -16,7 +16,7 @@ Start TestCase
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Call Method    ${options}    add_argument    --user-data-dir=/tmp/selenium_profile_${TEST NAME}
+    Call Method    ${options}    add_argument    --user-data-dir=${profile_dir}
     Open Browser   ${url["${env}"]}    ${browser["${browser_name}"]}    options=${options}
     Maximize Browser Window
 
