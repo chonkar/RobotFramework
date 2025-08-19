@@ -15,7 +15,7 @@ Start TestCase
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Open Browser   ${url["${env}"]}    ${browser[${browser_name}]}    options=${options}
+    Open Browser   ${url["${env}"]}    ${browser["${browser_name}"]}    options=${options}
     Maximize Browser Window
 
 End TestCase
