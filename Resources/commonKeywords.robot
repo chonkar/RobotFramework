@@ -11,7 +11,7 @@ ${env}        qa
 
 *** Keywords ***
 Start TestCase
-    [Arguments]    ${browser_name}=Firefox
+    [Arguments]    ${browser_name}=Chrome
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].${browser_name}Options()    sys, selenium.webdriver
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
