@@ -2,6 +2,7 @@
 Resource  ../../Resources/commonKeywords.robot
 Library  DataDriver  ../../TestData/Testdata.csv
 Variables  ../../Resources/Webelements.py
+Library    Collections
 
 
 Suite Setup  commonKeywords.Start TestCase
