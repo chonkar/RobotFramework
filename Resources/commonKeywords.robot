@@ -10,6 +10,10 @@ ${env}  qa
 *** Keywords ***
 Start TestCase
     [Arguments]  ${browser_name}=FireFox
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].${browser_name}.options.Options()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Open Browser  ${url.${env}} ${Browser.FireFox}
     Maximize Browser Window
     Sleep  2s
