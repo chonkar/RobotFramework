@@ -6,7 +6,7 @@ Library    Collections
 ${env}        qa
 &{browser}    Chrome=chrome    Firefox=firefox
 &{url}        dev=https://dev.saucedemo.com
-...           qa=https://www.saucedemo.com
+...           qa=https://www.saucedemo.com/v1
 ...           uat=https://uat.saucedemo.com
 
 *** Keywords ***
